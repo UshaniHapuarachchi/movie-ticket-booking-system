@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Blinker&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Blinker', 'Source Sans Pro';
+    background-color: black;
+}
+
+header{
+    z-index: 999;
+    position: sticky;
+    background-color: rgb(0, 0, 0);
+    top: 0;
+    left: 0;
+    width: 100%;
+    font-size: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 200px;
+    transition: 0.5s ease;
+}
+input[type="text"] {
+    width: 75%;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid;
+    border-radius: 6px;
+    font-size: 18px;
+    background: #fff;
+}
+header .brand{
+    color: #fff;
+    font-size: 1.5em;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+header .navigation{
+    position: relative;
+}
+header .navigation .navigation-items{
+    display: flex;
+    justify-content: center;
+}
+
+header .navigation .navigation-items a{
+    position: relative;
+    margin-top: 10px;
+    margin: auto;
+    color: #fff;
+    font-size: 1em;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 30px;
+    transition: 0.3s ease;
+}
+
+header .navigation .navigation-items a:before{
+    content: '';
+    position: absolute;
+    background: #fff;
+    width: 0;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    transition: 0.3s ease;
+}
+h1{
+    background-color: transparent;
+    font-size: 40px;
+    font-weight: 600;
+    padding-bottom: 20px;
+
+}
+header .navigation .navigation-items a:hover:before{
+    width: 100%;
+}
+.movie-container{
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    gap: 20px;
+}
+.movie{
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    margin: auto;
+    background-color: rgb(255,255,255,0.1);
+    border-radius: 5px;
+    backdrop-filter: blur(2px);
+    border: 2px solid transparent;
+    background-clip: border-box;
+    box-shadow: 10px 10px 10px rgb(45,55,68,0.0.3);
+    line-height: 1.5;
+    display: grid;
+    grid-template-columns: 450px 1fr ;
+    grid-gap: 0rem;
+    justify-items: center;
+    align-content: center;
+    justify-content: space-around;
+    padding: 20px;
+}
+form{
+    background-color: transparent;
+}
+.background-image{
+    background-image: url(../img/BG.png);
+    background-size: auto;
+    background-repeat: repeat-y;
+}
+.movie-text{
+    color: white;
+    background-color: transparent;
+}
+.movie-img{
+    background-color: transparent;
+    text-align: center;
+}
+.movie-img img{
+    max-width: 100%;
+    width: 350px;
+    height: 500px;
+}
+.movie-text p{
+    max-width: 550px;
+    font-size:large;
+    color: #ffffff;
+    line-height: 28px;
+    margin-bottom: 45px;
+    background-color: transparent;
+}
+
+button {
+    display: inline-flex;
+    height: 50px;
+    padding: 0;
+    background-color: transparent;
+    background: #d83300;
+    border: none;
+    outline:none;
+    border-radius: 5px;
+    overflow: hidden;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+
+}
+.material-icons-outlined{
+    background-color: transparent;
+}
+.button:hover {
+    background: #f86032;
+}
+.button:active{
+    background: #a02804;
+}
+.button-text,
+.button-icon{
+    display: inline-flex;
+    align-items: center;
+    padding: 0 24px;
+    color: #fff;
+    height: 100%;
+    background-color: transparent;
+}
+.button-icon{
+    font-size: 1.5rem;
+    background-color: transparent;
+    background: rgb(0, 0, 0,0.08);
+}
+.search input[type=text]{
+    width: 300px;
+    border: 1px solid transparent;
+    outline: none;
+    border-radius: 6px;
+    font-size: 18px;
+    background: #fff;
+}
+
+.search{
+    float:left;
+    margin:7px;
+    border: none;
+}
+.movie-price{
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+.m-time{
+    background-color: transparent;
+}
+.m-time h2{
+    background-color: transparent;
+}
+.m-time p{
+    background-color: transparent;
+}
+input[type="date"]{
+    background-color: transparent;
+
+    color: #fff;
+    font-size: 18px;
+    border: none;
+    outline: none;
+
+}
+input[type="date"]::-webkit-calendar-picker-indicator{
+    background-color: #fff;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 3px;
+}

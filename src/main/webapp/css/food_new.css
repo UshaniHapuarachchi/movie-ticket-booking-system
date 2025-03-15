@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Blinker&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Blinker', 'Source Sans Pro';
+    list-style: none;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    color: white;
+}
+body{
+    background-image: url(../img/BG.png);
+}
+.grid-container {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+/* Header */
+.navlist{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 25px;
+    font-weight: 600;
+    padding: 10px;
+}
+
+.navlist li{
+    position: relative;
+}
+.navlist a{
+    font-size: large;
+    float:left;
+    color: var(--text-color);
+    font-weight: 500;
+    padding: 10px 27px;
+    color: white;
+}
+.navlist a::after{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: var(--main-color);
+    bottom: -3px;
+    left: 0;
+    transition: ease .40s;
+}
+.navlist a:hover::after{
+    width: 100%;
+}
+
+/* Main menu */
+main {
+    grid-area: main;
+    padding-top: 80px;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: transparent;
+}
+.card{
+    display: grid;
+    grid-template-columns: 450px 1fr 200px;
+    grid-template-areas:
+        "img details button"; /* Add a second row for the header */
+    height: 350px;
+    width: 90%;
+    margin: auto;
+    background-color: rgb(255,255,255,0.1);
+    border-radius: 5px;
+    backdrop-filter: blur(2px);
+    border: 2px solid transparent;
+    background-clip: border-box;
+    box-shadow: 10px 10px 10px rgb(45,55,68,0.0.3);
+    line-height: 1.5;
+    justify-content: space-around;
+    padding: 20px;
+}
+.card img{
+    grid-area: img;
+    margin:auto;
+    width: 300px;
+    height: 300px;
+
+}
+.description{
+    grid-area: details;
+    font-size: 20px;
+}
+.description h3{
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+.qty{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+    padding-bottom: 10px;
+}
+
+/* -01+ */
+.wrapper{
+    height: 50px;
+    min-width: 175px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(255,255,255,0.1);
+    border-radius: 5px;
+    backdrop-filter: blur(2px);
+    border: 2px solid transparent;
+    border-radius: 6px;
+
+}
+.wrapper span{
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+}
+.wrapper span.num{
+    font-size: 25px;
+    padding-left: 7px;
+    padding-right: 7px;
+    border-right: 2px solid rgba(255, 255, 255, 0.2);
+    border-left: 2px solid rgba(255, 255, 255, 0.2);
+    pointer-events: none;
+}
+.wrapper span.plus,
+.wrapper span.minus{
+    cursor: pointer;
+}
+/* Button */
+button {
+    grid-area: button;
+    display: inline-flex;
+    height: 50px;
+    width: 148px;
+    padding: 0;
+    background-color: transparent;
+    background: #d83300;
+    border: none;
+    outline:none;
+    border-radius: 5px;
+    overflow: hidden;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+}
+.material-icons-outlined{
+    background-color: transparent;
+}
+.button:hover {
+    background: #f86032;
+}
+.button:active{
+    background: #a02804;
+}
+.button-text,
+.button-icon{
+    display: inline-flex;
+    align-items: center;
+    padding: 0 24px;
+    color: #fff;
+    height: 100%;
+    background-color: transparent;
+}
+.button-icon{
+    font-size: 1.5rem;
+    background-color: transparent;
+    background: rgb(0, 0, 0,0.08);
+}
+aside {
+    grid-area: sidebar;
+    padding-top: 80px;
+}
+
+.sidebar-card{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: auto;
+    background-color: rgb(255,255,255,0.1);
+    border-radius: 5px;
+    backdrop-filter: blur(2px);
+    border: 2px solid transparent;
+    background-clip: border-box;
+    box-shadow: 10px 10px 10px rgb(45,55,68,0.0.3);
+    line-height: 1.5;
+    padding: 20px;
+    gap: 10px;
+}
+.sidebar-card .payment h2{
+    font-size: 30px;
+}
+
+.payment-details{
+    display: flex;
+    flex-direction: row;
+    font-size: 20px;
+    width: 550px;
+    justify-content: space-between;
+}
+.payment-details-form{
+    width: 550px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 5px;
+}
+.input{
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 15px;
+    color: black;
+    border: none;
+    outline: none;
+}
+
+.btn-payment {
+    grid-area: button;
+    display: inline-flex;
+    height: 50px;
+    width: 148px;
+    float: right;
+    padding: 0;
+    background-color: transparent;
+    background: #066ff8;
+    border: none;
+    outline:none;
+    border-radius: 5px;
+    overflow: hidden;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+}
+.material-icons-outlined{
+    background-color: transparent;
+}
+.btn-payment:hover {
+    background: #3c8efa;
+}
+.btn-payment:active{
+    background: #024091;
+}
+.btn-payment-text,
+.btn-payment-icon{
+    display: inline-flex;
+    align-items: center;
+    padding: 0 24px;
+    color: #fff;
+    height: 100%;
+    background-color: transparent;
+}
+.button-icon{
+    font-size: 1.5rem;
+    background-color: transparent;
+    background: rgb(0, 0, 0,0.08);
+}
